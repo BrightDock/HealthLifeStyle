@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -23,7 +25,7 @@ namespace App_Health
         private List<DevExpress.Xpf.Charts.SeriesPoint> chart_points = new List<DevExpress.Xpf.Charts.SeriesPoint>();
         private Exception notify_status_e = null;
         private DateTime last_saved_point;
-        private int last_Dose = 0;
+        private int last_Dose = 1;
         /*
                 public List<Main_Grid> Main_Grid_rows
                 {
@@ -40,6 +42,7 @@ namespace App_Health
         */
         public MainWindow()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru-RU");
             InitializeComponent();
         }
 
@@ -79,6 +82,7 @@ namespace App_Health
                 Adapter.Fill(DT);
                 DevExpress.Xpf.Charts.SeriesPoint point = new DevExpress.Xpf.Charts.SeriesPoint();
                 String s = String.Empty;
+                Double val = 0.0;
 
                 foreach (DataRow DR in DT.Rows)
                 {
@@ -86,26 +90,28 @@ namespace App_Health
                         s += ' ' + DR[DC].ToString();
                     MessageBox.Show(s);
                     s = String.Empty;*/
-                    if (Convert.ToDateTime(DR[2]).AddHours(2).Date.Equals(DateTime.Now.Date))
+                    if (Convert.ToDateTime(DR[2]).Date.Equals(DateTime.Now.Date))
                     {
-                        if (last_Dose.Equals(Convert.ToInt32(DR[6])))
+                        if (!last_Dose.Equals(Convert.ToInt32(DR["Dose"])))
                         {
-                            point.Value += Convert.ToDouble(DR[4]) * Convert.ToDouble(DR[5]);
-                            point.Argument = Convert.ToDateTime(DR[2]).ToString();
-//                            point.ToolTipHint += String.Format("{0, 25} {1:0.##}", DR[3].ToString().TrimEnd(), (Convert.ToDouble(DR[4]) * Convert.ToDouble(DR[5]))).TrimStart() + " Ккал\n";
-                        }
-                        else {
                             last_Dose++;
+                            point.Value = val;
                             chart_points.Add(point);
                             point = new DevExpress.Xpf.Charts.SeriesPoint();
+                            val = 0.0;
                         }
+                        val += Convert.ToDouble(DR["Colarific_value"]) * Convert.ToDouble(DR["Grams"]);
+                        point.Argument = Convert.ToDateTime(DR[2]).ToLongTimeString();
+                        point.ToolTipHint += String.Format("{0, 25} {1:0.##}", DR[3].ToString().TrimEnd(), (Convert.ToDouble(DR[4]) * Convert.ToDouble(DR[5]))).TrimStart() + " Ккал\n";
 
                         DateTime.TryParse(DR[2].ToString(), out last_saved_point);
                         //                        MessageBox.Show(Convert.ToDateTime(DR[1]).ToString() + '\n' +  Convert.ToDouble(DR[2]).ToString());
                     }
-                    point = new DevExpress.Xpf.Charts.SeriesPoint(Convert.ToDouble(DT.Rows[0][4]) * Convert.ToDouble(DT.Rows[0][5]), Convert.ToDateTime(DT.Rows[0][2]));
-                    if (!point.Equals(new DevExpress.Xpf.Charts.SeriesPoint()))
-                        chart_points.Add(point);
+                }
+                if (!point.Equals(new DevExpress.Xpf.Charts.SeriesPoint()))
+                {
+                    point.Value = val;
+                    chart_points.Add(point);
                 }
             }
             catch (Exception e)
@@ -213,9 +219,9 @@ namespace App_Health
             {
                 foreach (Main_Grid row in Main_grid_rows.Main_Grid)
                 {
-                    point.Argument = DateTime.Now.ToShortTimeString();
+                    point.Argument = DateTime.Now.ToLongTimeString();
                     point.ToolTipHint += string.Format("{0} {1}\n", row.Name, row.Kkal);
-                    val += row.Grams;
+                    val += row.Kkal;
                     point.Value = val;
                 }
                 //                MessageBox.Show(point.Argument.ToString() + ' ' + point.Value.ToString() + '\n' + point.ToolTipHint + '\n');

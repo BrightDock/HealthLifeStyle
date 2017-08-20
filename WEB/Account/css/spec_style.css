@@ -1,0 +1,63 @@
+﻿#Central_block_central_col_UpdatePanel {
+    text-align: center;
+    position: relative;
+}
+
+#Central_block_central_col_UP {
+    position: relative;
+}
+
+#Central_block_central_col_wait {
+    display: inline-block;
+    font-size: 3rem;
+    color: darkgrey;
+    margin: 50px 0;
+    position: absolute;
+    left: calc(50% - 5rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.visible {
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 101;
+}
+
+.stop {
+    position: relative;
+    z-index: 101;
+}
+
+.base_var {
+    width: auto;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 1px solid #CCC7C7;
+}
+
+    .base_var > div {
+        margin: 10px 0;
+    }
+
+    .base_var button {
+        padding: 3px 7px;
+        background-color: #ffffff;
+        border: 2px solid #bfbfbf;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .base_var button:hover {
+        cursor: pointer;
+        background-color: #ababab;
+        color: #fff;
+    }

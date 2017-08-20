@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="WEB.Web" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="shortcut icon" href="/img/logo.bmp" />
+    <link rel="icon" href="/img/logo.ico" />
+    <link rel='stylesheet' type='text/css' href='/css/main.css' />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="/scripts/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/Slider.js"></script>
+    <script type="text/javascript" src="/scripts/Login_apearance.js"></script>
+    <script type="text/javascript" src="/scripts/search_box.js"></script>
+    <script type='text/javascript' src='/scripts/scrollTop.js'></script>
+    <script type='text/javascript' src="/scripts/sticky-sidebar.js"></script>
+    <script type='text/javascript' src="/scripts/comments.js"></script>
+    <script type='text/javascript' src="/scripts/jquery.sticky-kit.min.js"></script>
+    <script>
+        var is_loaded = false;
+        var colors = new Array();
+        var elems = document.getElementsByClassName("slide__text");
+        window.onload = function () {
+            is_loaded = true;
+            for (var i = 0; i < elems.length; i++) {
+                colors.push(elems.item(i).style.backgroundColor);
+            }
+        };
+        window.onresize = function () { resized() };
+
+        function resized() {
+            if (document.documentElement.clientWidth > 991) {
+                for (var i = 0; i < elems.length; i++) {
+                    if (!is_loaded)
+                        colors.push(elems.item(i).style.backgroundColor);
+                    elems.item(i).style.backgroundColor = 'transparent';
+                }
+            }
+            else {
+                for (var i = 0; i < elems.length; i++) {
+                    elems.item(i).style.backgroundColor = colors[i];
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <form id="form" runat="server" autocomplete="off">
+        <div class="head">
+            <div class="logo">
+                <div class="slogan">
+                    <a href="/News"><p>HLStyle</p></a>
+                    <asp:ContentPlaceHolder ID="head" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <div class="main_menu">
+                        <input type="checkbox" id="menuChbx" />
+                        <label for="menuChbx">Меню</label>
+                        <asp:Menu ID="Menu_top" runat="server" Height="60px" ItemWrap="True" Orientation="Horizontal" ValidateRequestMode="Enabled" ViewStateMode="Enabled" IncludeStyleBlock="False" Width="0px" DataSourceID="main_menu_SiteMap" SkipLinkText="">
+                            <StaticItemTemplate>
+                                <%# Eval("Text") %>
+                            </StaticItemTemplate>
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="main_menu_SiteMap" runat="server" ShowStartingNode="False" />
+                    </div>
+                </div>
+                <asp:Panel runat="server" ID="login_wrapper" class="login_wrapper">
+                    <asp:Panel runat="server" class="search_panel" ID="search_panel">
+                        <asp:TextBox runat="server" ID="search_box" CssClass="search_box" Text="Что найти?"></asp:TextBox>
+                    </asp:Panel>
+                    <asp:LinkButton OnClientClick="return false;" OnClick="search_Click" ID="search" runat="server" ToolTip="Поиск" >
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <!--<div class="mglass"></div>-->
+                    </asp:LinkButton>
+                        <asp:Panel ID="loginBut" OnClientClick="return false;" Text="Вход" runat="server" ValidateRequestMode="Disabled" UseSubmitBehavior="False"></asp:Panel>
+                    <asp:Panel runat="server" class="login" ID="login_panel">
+                    </asp:Panel>
+                </asp:Panel>
+            </div>
+
+            <div class="slideshow">
+
+
+                <div class="slider-container">
+                    <div class="slider-control left inactive"></div>
+                    <div class="slider-control right"></div>
+                    <ul class="slider-pagi"></ul>
+                    <asp:Panel runat="server" ID="Slider" class="slider">
+                        
+                    </asp:Panel>
+                    <script type="text/javascript">
+                        resized();
+                    </script>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left_sidebar">
+                <h3>Популярное</h3>
+                <div class="video_elem">
+                    <iframe src="https://www.youtube.com/embed/6xxNmtEkbEo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    <span>Правильное питание. Правильное питание для похудения. Как питаться чтобы быть здоровым</span>
+                </div>
+                <div class="video_elem">
+                    <iframe src="https://www.youtube.com/embed/VsBabMCYgn4?list=PLrOshr2ghvbJJLSaiLw0Bm_8j5aKxEGBR&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    <span>Выпечка и хлебцы, что можно, а что вредно? Зинаида Руденко</span>
+                </div>
+                    <asp:ContentPlaceHolder ID="Central_block_left_col" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="scrollTopBckgr">
+                    <button id="scrollTop"><i class="fa fa-angle-up" aria-hidden="true"></i>Вверх</button>
+                </div>
+            </div>
+
+            <div class="central_sidebar">
+                <asp:SiteMapPath ID="SiteMapPath" runat="server" CssClass="SiteMap_Path" RenderCurrentNodeAsLink="True" ValidateRequestMode="Disabled" ViewStateMode="Enabled" SkipLinkText="">
+                    <CurrentNodeStyle />
+                    <NodeStyle BorderStyle="None" Font-Overline="False" Font-Strikeout="False" />
+                    <RootNodeStyle/>
+                </asp:SiteMapPath>
+                <asp:ContentPlaceHolder ID="Central_block_central_col" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+<!--            <div class="right_sidebar">
+                <div class="video_elem">
+                    <iframe src="https://www.youtube.com/embed/nzBauWjUt5E?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    <span>Избыточный вес. Сбросить избыточный вес</span>
+                </div>
+                <asp:ContentPlaceHolder ID="Central_block_right_col" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>-->
+            
+        </div>
+
+        <div class="footer" id="footer">
+            <div class="footer_left_col">
+                <p>HLS</p>
+            </div>
+            <div class="foofter_centr_col">
+                <span>©HealthyLifeStyle 2016</span>
+            </div>
+            <div class="footer_right_col">
+                <p>Dmitriy Kuz</p>
+            </div>
+        </div>
+    </form>
+    <script src="../scripts/textarea_autosize.js"></script>
+</body>
+</html>
+

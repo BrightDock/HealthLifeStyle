@@ -1,0 +1,68 @@
+﻿#Central_block_central_col_Content {
+    width: 60%;
+    margin: 2em auto;
+    font-size: large;
+}
+
+div#Central_block_central_col_Content > * {
+    padding: 10px;
+    margin: 1rem auto;
+    text-align: left;
+    display: inline-block;
+}
+
+div#Central_block_central_col_Content > span {
+    border-right: 1px solid #CCC7C7;
+    width: calc(30% - 2em - 2px);
+}
+
+div#Central_block_central_col_Content > input, div#Central_block_central_col_Content > select {
+    border: none;
+    padding: 5px 0.5em 5px 0.5em;
+    margin: 1rem 1em;
+    width: calc(70% - 3em);
+    background: #E7E7E7;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 1px #CCC7C7 inset;
+    transition: all 0.2s ease;
+}
+
+#Central_block_central_col_Apply {
+    width: auto !important;
+    height: auto !important;
+    margin: 2rem auto !important;
+    display: block !important;
+}
+
+#Central_block_central_col_Apply:hover, div#Central_block_central_col_Content > input:hover, div#Central_block_central_col_Content > select:hover {
+    box-shadow: 0px 0px 0px 1px blue inset;
+    background: whitesmoke;
+}
+
+span#Central_block_central_col_status_label {
+    width: auto !important;
+    height: auto !important;
+    margin: 2rem auto !important;
+    display: block !important;
+    border: none !important;
+    text-align: center !important;
+}
+
+span#Central_block_central_col_updating {
+    font-size: 4rem;
+    text-align: center !important;
+    color: #9a9a9a;
+    padding: 0 !important;
+    border: none !important;
+    margin: 0 auto;
+    display: block !important;
+
+}
+
+.good {
+    color: limegreen;
+}
+
+.bad {
+    color: red;
+}

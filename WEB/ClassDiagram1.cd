@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="WEB.WebForm2" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.378" Y="1.898" />
+        <Point X="2.378" Y="2.375" />
+        <Point X="2" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>About.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.MembersOnly" Collapsed="true">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.816" Y="1.898" />
+        <Point X="6.816" Y="3.312" />
+        <Point X="7.25" Y="3.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgACECABAACgAAAAAAQAIBIQDCAAAAACIAUAAAA=</HashCode>
+      <FileName>Account\MembersOnly.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Settings" Collapsed="true">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.812" Y="1.898" />
+        <Point X="6.812" Y="3.312" />
+        <Point X="6.25" Y="3.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAAIAAAAAAAAAEAABACAAIAQAA=</HashCode>
+      <FileName>Account\Settings.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Settings_part" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.365" Y="1.898" />
+        <Point X="2.365" Y="2.375" />
+        <Point X="2.75" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAAADDQQACCAAkCSIAAEEAAIAIACIgAIAAiAI=</HashCode>
+      <FileName>Account\Settings.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.User" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.374" Y="1.898" />
+        <Point X="2.374" Y="4.534" />
+        <Point X="2" Y="4.534" />
+        <Point X="2" Y="4.688" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAgAAAACAAAAAAAgABAAAEAAAAAACEAIAQAA=</HashCode>
+      <FileName>Account\User.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.User_Profile" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.062" />
+        <Point X="11" Y="4.25" />
+        <Point X="10.75" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACIAAJAAAQgAQAQAAKAgAgAQIAEAAACBACAAABABAA=</HashCode>
+      <FileName>Account\User.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.WebForm1" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.809" Y="1.898" />
+        <Point X="6.809" Y="4.313" />
+        <Point X="6.25" Y="4.313" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Global" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAEAAAAAAAAAAFCIBQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Logon" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.809" Y="1.898" />
+        <Point X="6.809" Y="2.375" />
+        <Point X="6.25" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAEAAggACAAAQAIUAgAAAABAAAAAADAgIAQAg=</HashCode>
+      <FileName>MyResults.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Main_Grid" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.062" />
+        <Point X="11" Y="3.312" />
+        <Point X="11.25" Y="3.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>MyResults.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Main_WindowView_Model" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.062" />
+        <Point X="11" Y="3.312" />
+        <Point X="10.75" Y="3.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyResults.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.WebForm3" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.375" Y="1.898" />
+        <Point X="2.375" Y="5.625" />
+        <Point X="2" Y="5.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAAAAgABAAAEAAAAAACAAIAAAA=</HashCode>
+      <FileName>News.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.post_preview" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.062" />
+        <Point X="11" Y="2.25" />
+        <Point X="11.25" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgABAAgIAAWAASAQgAAAAEgIICEAEAAAAAAAAIAAAEA=</HashCode>
+      <FileName>News.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Post" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.38" Y="1.898" />
+        <Point X="2.38" Y="3.688" />
+        <Point X="2.75" Y="3.688" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAAAAAABAAAAAAAAAACEAIAQAA=</HashCode>
+      <FileName>Post.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Full_post" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.062" />
+        <Point X="11" Y="2.25" />
+        <Point X="10.75" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACABAAAAgAMAAQABAAAAAQgAIQQAAEgAAAAACCAAAEA=</HashCode>
+      <FileName>Post.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Web" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAQABAgAoAAAAAAABAAEAAAEEAAAABCCAAAAIRCAA=</HashCode>
+      <FileName>Web.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Account.ChangePassword" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.818" Y="1.898" />
+        <Point X="6.818" Y="2.375" />
+        <Point X="7.25" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Account\ChangePassword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Account.ChangePasswordSuccess" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.372" Y="1.898" />
+        <Point X="2.372" Y="3.701" />
+        <Point X="2" Y="3.701" />
+        <Point X="2" Y="3.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Account\ChangePasswordSuccess.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Account.Login" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.376" Y="1.898" />
+        <Point X="2.376" Y="4.544" />
+        <Point X="2.75" Y="4.544" />
+        <Point X="2.75" Y="4.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAACAAAEAAAAAQACAgIAEAA=</HashCode>
+      <FileName>Account\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Account.Registration" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="6.818" Y="1.898" />
+        <Point X="6.818" Y="4.312" />
+        <Point X="7.25" Y="4.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgASAiCgAAAEgQAAwBAAAAAAAAACAgIBAEA=</HashCode>
+      <FileName>Account\Registration.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Account.Search" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="System.Web.UI.Page" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.191" />
+        <Point X="4.75" Y="1.898" />
+        <Point X="2.369" Y="1.898" />
+        <Point X="2.369" Y="5.625" />
+        <Point X="2.75" Y="5.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAAACAAIAAAA=</HashCode>
+      <FileName>Account\Search.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WEB.Properties.Settings" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.UI.Page" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Web.UI.MasterPage" Collapsed="true">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Web.HttpApplication" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
